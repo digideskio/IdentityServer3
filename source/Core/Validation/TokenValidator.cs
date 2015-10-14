@@ -297,7 +297,7 @@ namespace IdentityServer3.Core.Validation
         private void LogError(string message)
         {
             var json = LogSerializer.Serialize(_log);
-            Logger.ErrorFormat("{0}\n{1}", message, json);
+            Logger.WarnFormat("{0}\n{1}", message, json);
         }
 
         private void LogSuccess()

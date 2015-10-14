@@ -517,7 +517,7 @@ namespace IdentityServer3.Core.Validation
             var validationLog = new AuthorizeRequestValidationLog(request);
             var json = LogSerializer.Serialize(validationLog);
 
-            Logger.ErrorFormat("{0}\n {1}", message, json);
+            Logger.WarnFormat("{0}\n {1}", message, json);
         }
 
         private void LogSuccess(ValidatedAuthorizeRequest request)
